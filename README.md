@@ -45,16 +45,23 @@ The following **additional** features are implemented:
 
 * Character properties have default values on creation and have different input methods
 
-## Video Walkthrough
+## Video Walkthroughs
 
-Here's a walkthrough of the aforementioned features:
+Here are walkthroughs of the aforementioned features:
 
+### Viewing Character Details
 <img src='view_char.gif' title='Viewing Character Details' width='' alt='Video Walkthrough' />
 
+
+### Editing Characters
 <img src='edit_char.gif' title='Editing Characters' width='' alt='Video Walkthrough' />
 
+
+### Creating Characters
 <img src='create_char.gif' title='Creating Characters' width='' alt='Video Walkthrough' />
 
+
+### Deleting Characters
 <img src='del_char.gif' title='Deleting Characters' width='' alt='Video Walkthrough' />
 
 
