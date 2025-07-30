@@ -2,7 +2,7 @@
 
 Submitted by: **Soluchi Fidel-Ibeabuchi**
 
-This web app: **insert description**
+This web app: **A full-stack web application for creating and managing D&D character sheets. Users can create new characters with customizable attributes and stats, view all their characters in a sortable summary page, edit existing characters through dedicated forms, and delete characters when needed. Each character has its own detailed page with unique URLs, providing a complete character management system for tabletop RPG enthusiasts.**
 
 Time spent: **6** hours spent in total
 
