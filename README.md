@@ -4,7 +4,7 @@ A full-stack web application for creating and managing Dungeons & Dragons charac
 ## Overview
 D&D Character Manager is a comprehensive character sheet management system that allows tabletop RPG enthusiasts to create, customize, and manage their characters digitally. Built with modern web technologies, it features a clean, intuitive interface with full CRUD functionality and real-time updates.
 
-##Live Application:
+## Live Application:
 
 ### Viewing Character Details
 <img src='view_char.gif' title='Viewing Character Details' width='' alt='Video Walkthrough' />
@@ -90,26 +90,31 @@ Mobile devices (320px - 767px) -->
 ## 🔧 Installation & Setup (bash)
 
 ### Clone the repository
-git clone https://github.com/yourusername/dnd-character-manager.git
+`git clone https://github.com/yourusername/dnd-character-manager.git`
 
 ### Navigate to project directory
-cd dnd-character-manager
+`cd dnd-character-manager`
 
 ### Install dependencies
-npm install
+`npm install`
 
 ### Set up environment variables
-cp .env.example .env.local
-Add your Supabase credentials to .env.local
+`cp .env.example .env.local`
+
+### Add your Supabase credentials to .env.local
 
 ### Start development server
-npm run dev
-🌐 Environment Variables
+`npm run dev`
+
+### Environment Variables
+```
 env
 NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
 NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+```
 
 ## Database Schema (sql)
+```
 create table public."Characters" (
   name text not null,
   class text null default 'N/A'::text,
@@ -136,6 +141,7 @@ create table public."Characters" (
   time_created timestamp without time zone null default now(),
   constraint Characters_pkey primary key (charid)
 ) TABLESPACE pg_default;
+```
 
 <!-- 🚦 API Endpoints
 GET /api/characters - Retrieve all characters
