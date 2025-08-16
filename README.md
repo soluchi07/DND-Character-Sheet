@@ -1,201 +1,84 @@
-# D&D Character Manager 🎲
-A full-stack web application for creating and managing Dungeons & Dragons character sheets with real-time CRUD operations and responsive design.
+# DND Character Sheet – Interactive Web App
 
-## Overview
-D&D Character Manager is a comprehensive character sheet management system that allows tabletop RPG enthusiasts to create, customize, and manage their characters digitally. Built with modern web technologies, it features a clean, intuitive interface with full CRUD functionality and real-time updates.
+**Author:** Soluchi Fidel-Ibeabuchi
+**Role:** Developer | Computer Science Student @ Howard University
 
-## Live Application:
+The **DND Character Sheet** is a web application that allows users to create, edit, and manage custom characters inspired by **Dungeons & Dragons**. Built with modern web development practices, the app demonstrates strong **CRUD functionality, dynamic routing, and form handling** within a polished user experience.
 
-### Viewing Character Details
-<img src='view_char.gif' title='Viewing Character Details' width='' alt='Video Walkthrough' />
+This project was completed for my **Web Development coursework** and highlights my ability to design **interactive single-page applications with React, persistent data handling, and structured UI workflows.**
 
+---
 
-### Editing Characters
-<img src='edit_char.gif' title='Editing Characters' width='' alt='Video Walkthrough' />
-
-
-### Creating Characters
-<img src='create_char.gif' title='Creating Characters' width='' alt='Video Walkthrough' />
-
-
-### Deleting Characters
-<img src='del_char.gif' title='Deleting Characters' width='' alt='Video Walkthrough' />
-
-## Key Features
+## 🚀 Features
 
 ### Core Functionality
-* Character Creation: Interactive form with validation for creating new D&D characters
 
-* Character Management: View, edit, and delete characters with real-time updates
+* **Character Creation:** Users can create a character with a name and customizable attributes.
+* **Summary Page:** Displays all user-created characters, sorted by creation date (newest first).
+* **Detail Pages:** Each character has a dedicated page with expanded information and a unique URL.
+* **Editing:** Users can update a character’s attributes via an edit form, with changes reflected in real time.
+* **Deletion:** Characters can be removed from the summary page via the edit interface.
 
-* Detailed Character Profiles: Individual pages for each character with comprehensive stat displays
+### Extended Functionality
 
+* **Default Values:** Characters are initialized with default properties, making the app easy to use for first-time users.
+* **Direct Navigation:** Users can seamlessly navigate between the character summary, detail pages, and edit forms.
 
-Responsive Design: Optimized for desktop and mobile devices
+### (Planned / Optional Features)
 
-### Technical Highlights
-* Data Persistence: Secure database storage with Supabase integration
+* Category-based attribute restrictions (e.g., character class or role-based options).
+* Crew statistics page showing attribute distributions across multiple characters.
+* Dynamic “success” metric for visualizing team strength.
 
-* CRUD Operations: Full Create, Read, Update, Delete functionality
+---
 
-* Dynamic Routing: Unique URLs for each character profile
+## 🛠️ Tech Stack
 
-* Form Validation: Client-side and server-side input validation
+* **Frontend:** React
+* **Backend / Database:** Supabase (CRUD operations, data persistence, and constraints)
+* **Routing:** React Router
+* **Version Control:** Git/GitHub
 
-* Real-time Updates: Immediate reflection of changes across all views
+---
 
-* Sorted Data Display: Characters ordered by creation date (newest first)
+## 📸 Demo & Walkthrough
 
+### Viewing Character Details
 
-## Tech Stack
+<img src='view_char.gif' alt='Viewing Character Details' />  
 
-### Frontend:
+### Editing Characters
 
-* React.js
+<img src='edit_char.gif' alt='Editing Characters' />  
 
-* Modern CSS3 with Grid & Flexbox
+### Creating Characters
 
-* Responsive Design Principles
+<img src='create_char.gif' alt='Creating Characters' />  
 
+### Deleting Characters
 
-### Backend:
+<img src='del_char.gif' alt='Deleting Characters' />  
 
-* Supabase (PostgreSQL)
+---
 
-* RESTful API Design
+## ⚡ Challenges & Learnings
 
-* Real-time Database Subscriptions
+* **Form Handling:** Designed reusable and validated forms for both character creation and editing.
+* **Database Constraints:** Managed uniqueness errors from Supabase tables while ensuring a smooth user experience.
+* **Routing & Navigation:** Implemented detail and edit pages with **unique URLs** for each character.
+* **UI/UX Design:** Created an intuitive interface that balances simplicity with flexibility.
 
-### Deployment:
+---
 
-* Netlify
+## 📚 Key Takeaways
 
+* Built a **full CRUD workflow** from scratch with React and Supabase.
+* Strengthened skills in **error handling, validation, and state management**.
+* Learned to implement **dynamic routing** and build scalable, user-friendly features.
+* Applied **real-world design patterns** to a creative project with practical relevance.
 
-## Performance & UX
+---
 
-* Fast Load Times: Optimized queries and efficient data fetching
+## 📄 License
 
-* Intuitive Interface: Clean, medieval-themed design with clear visual hierarchy
-
-* Accessibility: Semantic HTML and keyboard navigation support
-
-<!-- Error Handling: Comprehensive error states and user feedback -->
-## Responsive Design
-The application is fully responsive and provides an optimal experience across:
-
-* Desktop computers (1200px+)
-<!-- Tablets (768px - 1199px)
-Mobile devices (320px - 767px) -->
-
-## 🔧 Installation & Setup (bash)
-
-### Clone the repository
-`git clone https://github.com/yourusername/dnd-character-manager.git`
-
-### Navigate to project directory
-`cd dnd-character-manager`
-
-### Install dependencies
-`npm install`
-
-### Set up environment variables
-`cp .env.example .env.local`
-
-### Add your Supabase credentials to .env.local
-
-### Start development server
-`npm run dev`
-
-### Environment Variables
-```
-env
-NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
-NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
-```
-
-## Database Schema (sql)
-```
-create table public."Characters" (
-  name text not null,
-  class text null default 'N/A'::text,
-  lore text null default 'N/A'::text,
-  level bigint null default '1'::bigint,
-  img text null default '""'::text,
-  skills jsonb null default '["N/A"]'::jsonb,
-  str bigint null default '0'::bigint,
-  dex bigint null default '0'::bigint,
-  con bigint null default '0'::bigint,
-  int bigint null default '0'::bigint,
-  wis bigint null default '0'::bigint,
-  cha bigint null default '0'::bigint,
-  armor bigint null default '0'::bigint,
-  speed bigint null default '0'::bigint,
-  prof bigint null default '0'::bigint,
-  special jsonb null default '["N/A"]'::jsonb,
-  equipment jsonb null default '["N/A"]'::jsonb,
-  hits bigint null default '0'::bigint,
-  race text null default 'N/A'::text,
-  background text null default 'N/A'::text,
-  alignment text null default 'N/A'::text,
-  charid bigint generated by default as identity not null,
-  time_created timestamp without time zone null default now(),
-  constraint Characters_pkey primary key (charid)
-) TABLESPACE pg_default;
-```
-
-<!-- 🚦 API Endpoints
-GET /api/characters - Retrieve all characters
-POST /api/characters - Create new character
-GET /api/characters/[id] - Get specific character
-PUT /api/characters/[id] - Update character
-DELETE /api/characters/[id] - Delete character -->
-
-## Design Decisions
-* Medieval Theme: Chose a medieval aesthetic to match D&D's fantasy setting, using warm colors (golds, browns) and ornate typography.
-
-* Component Architecture: Modular React components for reusability and maintainability.
-
-* Database Design: Normalized schema with appropriate data types and constraints for character attributes.
-
-* User Experience: Prioritized intuitive navigation and immediate visual feedback for all user actions.
-
-## Future Enhancements
-* Character Categories: Class-based attribute restrictions
-* Party Management: Group characters into adventuring parties
-* Statistics Dashboard: Analytics on character distributions and attributes
-* Export Functionality: PDF character sheet generation
-* Collaborative Features: Share characters with other users
-* Advanced Search: Filter and sort characters by various attributes
-
-<!-- 📈 Performance Metrics
-Page Load Time: < 2 seconds
-Database Query Time: < 100ms average
-Lighthouse Score: 95+ (Performance, Accessibility, Best Practices) -->
-
-## Contributing
-Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
-
-## Fork the project
-Create your feature branch (git checkout -b feature/AmazingFeature)
-Commit your changes (git commit -m 'Add some AmazingFeature')
-Push to the branch (git push origin feature/AmazingFeature)
-Open a Pull Request
-
-## License
-```
-Copyright 2025 Soluchi Fidel-Ibeabuchi
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-    
-http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-```
-
-⭐ Star this repository if you found it helpful!
+Apache 2.0 License © 2025 Soluchi Fidel-Ibeabuchi
